@@ -69,6 +69,4 @@ public class BookData implements Serializable {
         return "BookData{" + "title=" + title + ", category=" + category
                 + ", description=" + category + ", quantity=" + quantity + '}';
     }
-    
-    
 }

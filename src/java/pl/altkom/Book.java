@@ -96,7 +96,4 @@ public class Book implements Serializable {
     public List<BookData> getBooksData() {
         return dao.getBooksData(byTitle, byCategory, sortBy + " " + order);
     }
-
-
-
 }

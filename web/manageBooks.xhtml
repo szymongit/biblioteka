@@ -13,7 +13,8 @@
             <h1><h:outputText value="#{msg.management}" style="color: brown"/></h1>
         </div>
         <h:form>
-            <f:ajax event="change" render="personsTable">
+            <h:panelGrid columns="3">
+            <f:ajax event="change" render="booksTable">
                 <h:outputText value="#{msg.sortby}"/>
                 <h:selectOneMenu value="#{bean.sortBy}">
                     <f:selectItem itemLabel="#{msg.title}" itemValue="title"/>
@@ -24,19 +25,22 @@
                     <f:selectItem itemLabel="#{msg.desc}" itemValue="desc"/>
                 </h:selectOneMenu><p/>
             </f:ajax>
-            <f:ajax event="keyup" render="personsTable">
+            </h:panelGrid>              
+            <f:ajax event="keyup" render="booksTable">
                 <h:outputText value="#{msg.filterby}"/>
+                <h:panelGrid columns="2">  
+                    <h:outputText value="#{msg.title}"/>
+                    <h:inputText value="#{bean.byTitle}"/>
 
-                <h:outputText value="#{msg.title}"/>
-                <h:inputText value="#{bean.byTitle}"/><br/>
-
-                <h:outputText value="#{msg.category}"/>
-                <h:inputText value="#{bean.byCategory}"/><br/>
+                    <h:outputText value="#{msg.category}"/>
+                    <h:inputText value="#{bean.byCategory}"/>
+                </h:panelGrid>
             </f:ajax>
+            
             <hr/>
             <h:dataTable var="book" value="#{bean.booksData}" border="1"
                          cellpadding="3" cellspacing="3"
-                         rowClasses="class1,class2" id="personsTable">
+                         rowClasses="class1,class2" id="booksTable">
                 <h:column>
                     <f:facet name="header">
                         <h:outputText value="#{msg.title}"/>

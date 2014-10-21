@@ -7,8 +7,12 @@
     </h:head>
     <h:body >
         <h1>#{msg.menu}</h1>
-        <h:link value="#{msg.add_book}" outcome="addBook"/><br/>
-        <h:link value="#{msg.manage_books}" outcome="manageBooks"/>
+<!--    <h:link value="#{msg.add_book}" outcome="addBook"/><br/>
+        <h:link value="#{msg.manage_books}" outcome="manageBooks"/><br/>-->
+        <h:form>
+            <h:commandButton value="#{msg.add_book}" action="addBook"/><br/><p/>
+            <h:commandButton value="#{msg.manage_books}" action="manageBooks"/>
+        </h:form>
     </h:body>
 </html>
 

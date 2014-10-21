@@ -17,6 +17,8 @@ public class BookData implements Serializable {
     private int id;
     @Column(name = "title")
     private String title;
+    @Column(name = "author")
+    private String author;
     @Column(name = "description")
     private String description;
     @Column(name = "quantity")
@@ -34,6 +36,14 @@ public class BookData implements Serializable {
 
     public String getTitle() {
         return title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
     }
 
     public void setTitle(String title) {
@@ -66,7 +76,7 @@ public class BookData implements Serializable {
 
     @Override
     public String toString() {
-        return "BookData{" + "title=" + title + ", category=" + category
+        return "BookData{" + "title=" + title + "author=" + author + ", category=" + category
                 + ", description=" + category + ", quantity=" + quantity + '}';
     }
 }

@@ -9,7 +9,7 @@ public interface BookDataDAO {
 
     public void saveBookData(BookData bookData);
     public List<BookData> getBooksData();
-    public List<BookData> getBooksData(String byTitle, String byCategory,
+    public List<BookData> getBooksData(String byTitle, String byAuthor, String byCategory,
             String sortBy);
     public void deleteBookData(int id);
     public void updateBookData(BookData bookData);

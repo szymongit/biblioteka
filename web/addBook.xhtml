@@ -13,6 +13,8 @@
             <h:panelGrid columns="2">
                 <h:outputText value="#{msg.title}"/>
                 <h:inputText value="#{bean.bookData.title}"/>
+                <h:outputText value="#{msg.author}"/>
+                <h:inputText value="#{bean.bookData.author}"/>
                 <h:outputText value="#{msg.description}"/>
                 <h:inputText value="#{bean.bookData.description}"/>
                 <h:outputText value="#{msg.quantity}"/>
@@ -20,7 +22,7 @@
                 <h:outputText value="#{msg.category}"/>
                 <h:inputText value="#{bean.bookData.category}" />
             </h:panelGrid>
-            <h:commandButton value="#{msg.save}" action="#{bean.saveBookData}"/>
+            <h:commandButton value="#{msg.save}" action="#{bean.saveBookData}" onclick="alert('Dodano książkę do bazy');"/>
         </h:form>
     </h:body>
 </html>

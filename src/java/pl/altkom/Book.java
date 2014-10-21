@@ -22,6 +22,7 @@ public class Book implements Serializable {
     private String sortBy = "title";
     private String order = "asc";
     private String byTitle = "";
+    private String byAuthor = "";
     private String byCategory = "";
 
     public BookData getBookData() {
@@ -54,6 +55,14 @@ public class Book implements Serializable {
 
     public void setByTitle(String byTitle) {
         this.byTitle = byTitle;
+    }
+
+    public String getByAuthor() {
+        return byAuthor;
+    }
+
+    public void setByAuthor(String byAuthor) {
+        this.byAuthor = byAuthor;
     }
 
     public String getByCategory() {
@@ -94,6 +103,6 @@ public class Book implements Serializable {
     }
 
     public List<BookData> getBooksData() {
-        return dao.getBooksData(byTitle, byCategory, sortBy + " " + order);
+        return dao.getBooksData(byTitle, byAuthor, byCategory, sortBy + " " + order);
     }
 }

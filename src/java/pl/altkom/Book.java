@@ -19,10 +19,10 @@ public class Book implements Serializable {
     private BookDataDAO dao;
 
     private int editedId;
-    private String sortBy = "title";
+    private String sortBy = "author";
     private String order = "asc";
-    private String byTitle = "";
     private String byAuthor = "";
+    private String byTitle = "";
     private String byCategory = "";
 
     public BookData getBookData() {
@@ -84,7 +84,7 @@ public class Book implements Serializable {
     public String saveBookData() {
         // zapis do bazy
         dao.saveBookData(bookData);
-        return "main";
+        return "add";
     }
 
     public String deleteBookData(int id) {
@@ -103,6 +103,6 @@ public class Book implements Serializable {
     }
 
     public List<BookData> getBooksData() {
-        return dao.getBooksData(byTitle, byAuthor, byCategory, sortBy + " " + order);
+        return dao.getBooksData(byAuthor, byTitle, byCategory, sortBy + " " + order);
     }
 }

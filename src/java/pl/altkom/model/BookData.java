@@ -76,7 +76,7 @@ public class BookData implements Serializable {
 
     @Override
     public String toString() {
-        return "BookData{" + "title=" + title + "author=" + author + ", category=" + category
-                + ", description=" + category + ", quantity=" + quantity + '}';
+        return "BookData{" + "author=" + author + "title=" + title + ", category=" + category
+                + ", description=" + description + ", quantity=" + quantity + '}';
     }
 }

@@ -5,7 +5,7 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
     <h:head>
-        <h:outputStylesheet library="style" name="mystyles.css"/>
+        <h:outputStylesheet library="style" name="manageBooks.css"/>
         <title>#{msg.management}</title>
     </h:head>
     <h:body>
@@ -32,11 +32,11 @@
                 <h:outputText value="#{msg.filterby}"/>
                 <h:panelGrid columns="2">  
                     <h:outputText value="#{msg.author}"/>
-                    <h:inputText value="#{bean.byAuthor}"/>
+                    <h:inputText value="#{bean.byAuthor}" size="40"/>
                     <h:outputText value="#{msg.title}"/>
-                    <h:inputText value="#{bean.byTitle}"/>
+                    <h:inputText value="#{bean.byTitle}" size="40"/>
                     <h:outputText value="#{msg.category}"/>
-                    <h:inputText value="#{bean.byCategory}"/>
+                    <h:inputText value="#{bean.byCategory}" size="40"/>
                 </h:panelGrid>
             </f:ajax>
             
@@ -86,7 +86,7 @@
                     <h:commandButton value="#{msg.edit}" action="#{bean.editBookData(book)}" rendered="#{book.id != bean.editedId}"/>
                     <h:commandButton value="#{msg.save}" action="#{bean.updateBookData}" rendered="#{book.id == bean.editedId}"/>
                 </h:column>
-            </h:dataTable>
+            </h:dataTable><p/>
             
             <h:commandButton value="#{msg.index}" action="index" title="Powrót do strony głównej"/>
         </h:form>

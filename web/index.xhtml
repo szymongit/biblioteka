@@ -3,16 +3,20 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html">
     <h:head>
+        <h:outputStylesheet library="style" name="index.css"/>
         <title>#{msg.library}</title>
     </h:head>
     <h:body >
-        <h1>#{msg.library}</h1>
-<!--    <h:link value="#{msg.add_book}" outcome="addBook"/><br/>
-        <h:link value="#{msg.manage_books}" outcome="manageBooks"/><br/>-->
-        <h:form>
-            <h:commandButton value="#{msg.add_book}" action="addBook"/><br/><p/>
-            <h:commandButton value="#{msg.manage_books}" action="manageBooks"/>
-        </h:form>
+        <div id="main" class="page">
+            <div id="pageLeft" class="colLeft">
+                <h1 style="font-family:verdana">#{msg.library}</h1>
+            </div>
+            <div id="pageRight" class="colRight">
+                <h:form>
+                    <h:commandButton value="#{msg.add_book}" action="addBook"/><br/><p/>
+                    <h:commandButton value="#{msg.manage_books}" action="manageBooks"/>
+                </h:form>
+            </div>
+        </div>
     </h:body>
 </html>
-

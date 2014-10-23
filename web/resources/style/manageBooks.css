@@ -1,12 +1,23 @@
-
 body {
-    background-color: #E9F2F9;
+    background-color:#DCD9D1;
+}
+
+.page {
+    background-color:#F6F1E4;
+    width:1024px; 
+    height:700px;
+    margin-top:30px;
+    margin-bottom:30px; 
+    margin-left:auto; 
+    margin-right:auto; 
+    padding-top:40px;
+    box-shadow: 5px 5px 5px #888888;
 }
 
 .class1 {
-    background: yellow;
+    background: inactivecaption;
 }
 
 .class2 {
-    background: blueviolet;
+    background: lightgreen;
 }

@@ -10,29 +10,31 @@
         <title>#{msg.new_book}</title>
     </h:head>
     <h:body>
-        <h1>#{msg.new_book}</h1>
-        <h:form>
-            <h:panelGrid columns="2">
-                <h:outputText value="#{msg.author}"/>
-                <h:inputText id="author" value="#{bean.bookData.author}" size="40"/>
-                <h:outputText value="#{msg.title}"/>
-                <h:inputText value="#{bean.bookData.title}" size="40"/>
-                <h:outputText value="#{msg.description}"/>
-                <h:inputText value="#{bean.bookData.description}" size="40"/>
-                <h:outputText value="#{msg.category}"/>
-                <h:inputText value="#{bean.bookData.category}" size="40"/>
-                <h:outputText value="#{msg.quantity}"/>
-                <h:inputText value="#{bean.bookData.quantity}" size="40"/>
+        <div id="main" class="page">
+            <h1>#{msg.new_book}</h1>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{msg.author}"/>
+                    <h:inputText id="author" value="#{bean.bookData.author}" size="40"/>
+                    <h:outputText value="#{msg.title}"/>
+                    <h:inputText value="#{bean.bookData.title}" size="40"/>
+                    <h:outputText value="#{msg.description}"/>
+                    <h:inputText value="#{bean.bookData.description}" size="40"/>
+                    <h:outputText value="#{msg.category}"/>
+                    <h:inputText value="#{bean.bookData.category}" size="40"/>
+                    <h:outputText value="#{msg.quantity}"/>
+                    <h:inputText value="#{bean.bookData.quantity}" size="40"/>
 
-                <p:watermark for="author" value="#{msg.name} #{msg.surname}"/> 
-            </h:panelGrid>
-            
-            <h:panelGrid columns="3">
-                <h:commandButton value="#{msg.index}" action="index" title="Powrót do strony głównej"/>
-                <h:commandButton value="#{msg.list}" action="manageBooks" title="Lista książek"/> 
-                <h:commandButton value="#{msg.save}" action="#{bean.saveBookData}" onclick="alert('Dodano książkę do bazy');" title="Zapisz książkę"/>
-            </h:panelGrid>
-        </h:form>
+                    <p:watermark for="author" value="#{msg.name} #{msg.surname}"/> 
+                </h:panelGrid>
+
+                <h:panelGrid columns="3">
+                    <h:commandButton value="#{msg.index}" action="index" title="Powrót do strony głównej"/>
+                    <h:commandButton value="#{msg.list}" action="manageBooks" title="Lista książek"/> 
+                    <h:commandButton value="#{msg.save}" action="#{bean.saveBookData}" onclick="alert('Dodano książkę do bazy');" title="Zapisz książkę"/>
+                </h:panelGrid>
+            </h:form>
+        </div>
     </h:body>
 </html>
 

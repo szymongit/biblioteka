@@ -5,13 +5,45 @@ body {
 .page {
     background-color:#F6F1E4;
     width:1024px; 
-    height:700px;
     margin-top:30px;
     margin-bottom:30px; 
     margin-left:auto; 
     margin-right:auto; 
-    padding-top:40px;
+    padding-top:10px;
+    padding-bottom:80px;
     box-shadow: 5px 5px 5px #888888;
+}
+
+.headline {
+    background-color:white;
+    float:top;
+    width:1024px; 
+    height:120px;
+}
+
+#head {
+    font-family: 'Tangerine', serif;
+    font-size: 40px;
+    text-shadow: 4px 4px 4px #aaa;
+    text-indent: 32%;
+    letter-spacing: 15px;
+    /*        display: table-cell;
+            vertical-align:middle;
+                text-align: left;*/
+    /*    border: 1px solid red;*/
+    /*    vertical-align: middle;*/
+}
+
+.centerTopD {
+    float: top;
+    padding-top: 30px;
+    text-align: center;
+    letter-spacing: 10px;
+}
+
+.centerLeft {
+    float:left;
+    padding-left: 100px;
 }
 
 .class1 {
@@ -20,4 +52,25 @@ body {
 
 .class2 {
     background: lightgreen;
+}
+
+.centerRight {
+    float:right;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+#table{
+    float: bottom;
+    padding-top: 200px;
+    padding-left: 100px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+}
+
+.bottomButton {
+    float: bottom;
+    position: relative;
+    top: 0px;
+    left: 840px;
 }

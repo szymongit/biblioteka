@@ -10,6 +10,50 @@ body {
     margin-bottom:30px; 
     margin-left:auto; 
     margin-right:auto; 
-    padding-top:40px;
+    padding-top:10px;
     box-shadow: 5px 5px 5px #888888;
 }
+
+.headline {
+    background-color:white;
+    float:top;
+    width:1024px; 
+    height:120px;
+}
+
+#head {
+    font-family: 'Tangerine', serif;
+    font-size: 40px;
+    text-shadow: 4px 4px 4px #aaa;
+    text-indent: 32%;
+    letter-spacing: 15px;
+/*        display: table-cell;
+        vertical-align:middle;
+            text-align: left;*/
+    /*    border: 1px solid red;*/
+    /*    vertical-align: middle;*/
+}
+
+.centerLeft {
+    float:left;
+    padding-top: 40px;
+    padding-left: 100px;
+}
+.centerRight {
+    float:right;
+    padding-top: 40px;
+}
+
+.bottomButton {
+    float: bottom;
+    padding-top: 250px;
+    position: relative;
+    top: 10px;
+    left: 247px;
+/*    right: -400px;*/
+/*    bottom: -190px;*/
+}
+
+/*    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;*/

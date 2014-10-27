@@ -14,24 +14,23 @@ body {
     box-shadow: 5px 5px 5px #888888;
 }
 
-.headline {
-    background-color:white;
-    float:top;
-    width:1024px; 
-    height:120px;
+.wysokoscTop {
+    height: 30px;
 }
 
-#head {
+.wysokoscBottom {
+    height: 10px;
+}
+
+.headline {
+    background-color:white;
     font-family: 'Tangerine', serif;
-    font-size: 40px;
+    font-size: 80px;
+    font-weight: bold;
+    text-align: center;
     text-shadow: 4px 4px 4px #aaa;
     text-indent: 32%;
-    letter-spacing: 15px;
-/*        display: table-cell;
-        vertical-align:middle;
-            text-align: left;*/
-    /*    border: 1px solid red;*/
-    /*    vertical-align: middle;*/
+    letter-spacing: 15px; 
 }
 
 .centerLeft {
@@ -50,10 +49,8 @@ body {
     position: relative;
     top: 10px;
     left: 247px;
-/*    right: -400px;*/
-/*    bottom: -190px;*/
 }
 
-/*    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 40px;*/
+.errors {
+    color: blue;
+}

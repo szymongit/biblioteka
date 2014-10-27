@@ -84,7 +84,7 @@ public class Book implements Serializable {
     public String saveBookData() {
         // zapis do bazy
         dao.saveBookData(bookData);
-        return "add";
+        return "main";
     }
 
     public String deleteBookData(int id) {

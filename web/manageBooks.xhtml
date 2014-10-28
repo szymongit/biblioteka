@@ -10,22 +10,22 @@
             <title>#{msg.management}</title>
         </h:head>
         <h:body>
-            <div id="main" class="page">
+            <div class="page">
                 &nbsp;<br/>&nbsp;<br/>
-                <div  class="headline"><div class="wysokoscTop" />
+                <div class="headline"><div class="wysokoscTop" />
                     #{msg.library}
                     <div class="wysokoscBottom" /></div>
 
                 <h:form>
-                    <div id="topD" class="centerTopD">
+                    <div class="centerTopD">
                         <h1><h:outputText value="#{msg.management}"/></h1>
                     </div>
 
-                    <div id="center" class="centerLeft">
+                    <div class="centerLeft">
                         <h2>#{msg.searchFB}</h2>
                         <h:panelGrid columns="3">
                             <f:ajax event="change" render="booksTable">
-                                <h:outputText value="#{msg.sortby}"/>
+                                <h:outputText value="#{msg.sortby}" style="font-weight: bold"/>
                                 <h:selectOneMenu value="#{bean.sortBy}">
                                     <f:selectItem itemLabel="#{msg.authorA}" itemValue="author"/>
                                     <f:selectItem itemLabel="#{msg.titleT}" itemValue="title"/>
@@ -39,20 +39,25 @@
                         </h:panelGrid>      
 
                         <f:ajax event="keyup" render="booksTable">
-                            <h:outputText value="#{msg.filterby}"/>
+                            <h:outputText value="#{msg.filterby}" style="font-weight: bold"/>
                             <h:panelGrid columns="2">  
                                 <h:outputText value="#{msg.author}"/>
-                                <h:inputText value="#{bean.byAuthor}" size="40"/>
+                                <h:inputText value="#{bean.byAuthor}" size="35"/>
                                 <h:outputText value="#{msg.title}"/>
-                                <h:inputText value="#{bean.byTitle}" size="40"/>
+                                <h:inputText value="#{bean.byTitle}" size="35"/>
                                 <h:outputText value="#{msg.category}"/>
-                                <h:inputText value="#{bean.byCategory}" size="40"/>
+                                <h:inputText value="#{bean.byCategory}" size="35"/>
                             </h:panelGrid>
-                        </f:ajax>
+                        </f:ajax><br/>
+                        <div class="button">
+                            <h:panelGrid columns="2" cellpadding="5">
+                                <h:commandButton value="#{msg.index}" action="index" title="Powrót do strony głównej"/>
+                                <h:commandButton value="#{msg.add_new_book}" action="addBook" title="Dodaj nową książkę"/>
+                            </h:panelGrid>
+                        </div>
                     </div>
 
-                    <!--            <hr/>-->
-                    <div id="imageRight" class="centerRight">
+                    <div class="centerRight">
                         <h:graphicImage library="images" name="timeBooks2.png" width="450px" height="200px" alt="Add books"/>
                     </div>
                     <div id="table">
@@ -101,13 +106,7 @@
                                 <h:commandButton value="#{msg.edit}" action="#{bean.editBookData(book)}" rendered="#{book.id != bean.editedId}"/>
                                 <h:commandButton value="#{msg.save}" action="#{bean.updateBookData}" rendered="#{book.id == bean.editedId}"/>
                             </h:column>
-                        </h:dataTable><p/>
-                    </div>
-                    <div id="button" class="bottomButton">
-                        <h:panelGrid columns="2" cellpadding="5">
-                            <h:commandButton value="#{msg.index}" action="index" title="Powrót do strony głównej"/>
-                            <h:commandButton value="#{msg.add_new_book}" action="addBook" title="Dodaj nową książkę"/>
-                        </h:panelGrid>
+                        </h:dataTable>
                     </div>
                 </h:form>
             </div>      

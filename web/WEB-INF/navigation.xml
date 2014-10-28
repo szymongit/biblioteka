@@ -14,10 +14,10 @@
             <to-view-id>/manageBooks.xhtml</to-view-id>
             <redirect/>
         </navigation-case>
-<!--        <navigation-case>
+        <navigation-case>
             <from-outcome>add</from-outcome>
             <to-view-id>/addBook.xhtml</to-view-id>
             <redirect/>
-        </navigation-case>-->
+        </navigation-case>
     </navigation-rule>
 </faces-config>

@@ -9,13 +9,12 @@
             <link href="http://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet" type="text/css"/>
             <title>#{msg.library}</title>
         </h:head>
-        <h:body >
-
-            <div id="main" class="page">
-                <div id="pageLeft" class="colLeft">
+        <h:body>
+            <div class="page">
+                <div class="colLeft">
                     <h1>#{msg.library}</h1>
                 </div>
-                <div id="pageRight" class="colRight">
+                <div class="colRight">
                     <h:form>
                         <h:panelGroup>
                             <div id="language">
@@ -23,6 +22,7 @@
                                 <h:commandLink immediate="true" rendered="#{!languageBean.polish}" action="#{languageBean.switchLocale}">
                                     <h:graphicImage library="images" name="pl.png" width="15px" height="15px" alt="PL"/>
                                 </h:commandLink>
+
                                 <h:commandLink immediate="true" rendered="#{languageBean.polish}" action="#{languageBean.switchLocale}">
                                     <h:graphicImage library="images" name="en.png" width="15px" height="15px" alt="EN"/>
                                 </h:commandLink>
@@ -30,12 +30,17 @@
                         </h:panelGroup><br/>
 
                         <h:graphicImage library="images" name="oldBooks.png" width="512px" height="350px" alt="Books"/><br/><br/><br/>
+
                         <h:panelGrid columns="2" cellpadding="10">
                             <h:commandButton value="#{msg.add_book}" action="addBook"/>
                             <h:commandButton value="#{msg.manage_books}" action="manageBooks"/>
                         </h:panelGrid>
                     </h:form>
                 </div>
+                <div class="author"><div class="wysokoscTop" />
+                    #{msg.szKauthor}: Szymon Karbowiak<br/>
+                    #{msg.contact}:  <a href="szymon.karbowiak@gmail.com">szymon.karbowiak@gmail.com</a> 
+                    <div class="wysokoscBottom" /></div>
             </div>
         </h:body>
     </f:view>

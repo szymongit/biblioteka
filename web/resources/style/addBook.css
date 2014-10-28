@@ -5,7 +5,6 @@ body {
 .page {
     background-color:#F6F1E4;
     width:1024px; 
-    height:700px;
     margin-top:30px;
     margin-bottom:30px; 
     margin-left:auto; 
@@ -38,19 +37,26 @@ body {
     padding-top: 40px;
     padding-left: 100px;
 }
+
 .centerRight {
     float:right;
-    padding-top: 40px;
+    padding-top: 65px;
 }
 
-.bottomButton {
+.button {
+    float: left;
+    padding-top: 10px;
+    padding-left: 210px;
+}
+
+.bAndL {
     float: bottom;
-    padding-top: 250px;
-    position: relative;
-    top: 10px;
-    left: 247px;
-}
-
-.errors {
-    color: blue;
+    padding-top: 365px;
+    padding-bottom: 100px;
+    padding-left: 525px;
+    font-weight: bold;
+    font-family: 'Tangerine', serif;
+    font-size: 25px;
+    text-shadow: 4px 4px 4px #aaa;
+    letter-spacing: 5px;
 }

@@ -11,70 +11,66 @@
             <title>#{msg.new_book}</title>
         </h:head>
         <h:body>
-            <div id="main" class="page">
+            <div class="page">
                 <h:form>
                     &nbsp;<br/>&nbsp;<br/>
-                    <div  class="headline"><div class="wysokoscTop" />
+                    <div class="headline"><div class="wysokoscTop" />
                         #{msg.library}
                         <div class="wysokoscBottom" /></div>
 
-                    <div id="center" class="centerLeft">
+                    <div class="centerLeft">
                         <h2>#{msg.new_book}</h2>
-
-                    
-                        <h:panelGrid columns="3">
-                            <h:outputText value="#{msg.author}"/>
-                            <h:inputText id="author" value="#{bean.bookData.author}" size="45"
+                        <h:panelGrid columns="2">
+                            <h:outputText value="#{msg.author}" style="font-weight: bold"/>
+                            <h:inputText id="author" value="#{bean.bookData.author}" size="30"
                                          requiredMessage="#{msg.errorAuthor}" required="true">
-                                
-                                <f:validateLength minimum="3"/>
-                            </h:inputText>
-                            <h:message for="author"/>
-                            <h:outputText value="#{msg.title}"/>
-                            <h:inputText value="#{bean.bookData.title}" size="45"
-                                         id="titleEr" validatorMessage="#{msg.errorTitle}">
-                                
-                                <f:validateLength minimum="3"/>
-                            </h:inputText>
-                            <h:message for="titleEr"/>
-                            <h:outputText value="#{msg.description}"/>
-                            <h:inputText value="#{bean.bookData.description}" size="45"
-                                         id="descripEr" validatorMessage="#{msg.errorDescrip}" requiredMessage="ddddd" required="true" >
-                                
-                                <f:validateLength minimum="3"/>
-                            </h:inputText>
-                            <h:message for="descripEr"/>
-                            <h:outputText value="#{msg.category}"/>
-                            <h:inputText value="#{bean.bookData.category}" size="45"
-                                         id="categEr" validatorMessage="#{msg.errorCateg}">
-                                
-                                <f:validateLength minimum="3"/>
-                            </h:inputText>
-                            <h:message for="categEr"/>
-                            <h:outputText value="#{msg.quantity}"/>
-                            <h:inputText value="#{bean.bookData.quantity}" size="45"
+                                <f:validateLength maximum="1024" />
+                            </h:inputText><br/>
+                            <h:message for="author" style="color: red"/>
+
+                            <h:outputText value="#{msg.title}" style="font-weight: bold"/>
+                            <h:inputText value="#{bean.bookData.title}" size="30"
+                                         id="titleEr" requiredMessage="#{msg.errorTitle}" required="true">
+                                <f:validateLength maximum="1024" />
+                            </h:inputText><br/>
+                            <h:message for="titleEr" style="color: red"/>
+
+                            <h:outputText value="#{msg.description}" style="font-weight: bold"/>
+                            <h:inputText value="#{bean.bookData.description}" size="30"
+                                         id="descripEr" requiredMessage="#{msg.errorDescrip}" required="true">
+                                <f:validateLength maximum="1024" />
+                            </h:inputText><br/>
+                            <h:message for="descripEr" style="color: red" />
+
+                            <h:outputText value="#{msg.category}" style="font-weight: bold"/>
+                            <h:inputText value="#{bean.bookData.category}" size="30"
+                                         id="categEr" requiredMessage="#{msg.errorCateg}" required="true">
+                                <f:validateLength maximum="255" />
+                            </h:inputText><br/>
+                            <h:message for="categEr" style="color: red"/>
+
+                            <h:outputText value="#{msg.quantity}" style="font-weight: bold"/>
+                            <h:inputText value="#{bean.bookData.quantity}" size="30"
                                          id="quantEr" converterMessage="#{msg.errorQuant}">
-                                <f:convertNumber integerOnly="true" type="number"/>
-                                
-                            </h:inputText>
-                            <h:message for="quantEr"/>
+                                <f:convertNumber integerOnly="true" type="number"/>    
+                            </h:inputText><br/>
+                            <h:message for="quantEr" style="color: red"/>
+
                             <p:watermark for="author" value="#{msg.name} #{msg.surname}"/> 
                         </h:panelGrid>
-                    </div>
-                    <div id="imageRight" class="centerRight">
-                        <h:graphicImage library="images" name="booksR.png" width="500px" height="300px" alt="Add books"/>
-                    </div>
-                    <div id="button" class="bottomButton">
-                        <h:panelGrid columns="1">
-
+                        <div class="button">
                             <h:commandButton value="#{msg.save}" action="#{bean.saveBookData}" title="Zapisz do bazy"/>
-
-
-                        </h:panelGrid>
+                        </div>
+                    </div>
+                    <div class="centerRight">
+                        <h:graphicImage library="images" name="booksR.png" width="500px" height="280px" alt="Add books"/>
                     </div>
                 </h:form>
-                <h:link value="#{msg.index}" outcome="index" title="Powrót do strony głównej"/>
-                <h:link value="#{msg.list}" outcome="manageBooks" title="Lista książek"/>
+                
+                <div class="bAndL">
+                    <h:link value="#{msg.index}" outcome="index" title="Powrót do strony głównej" style="color: black"/>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <h:link value="#{msg.list}" outcome="manageBooks" title="Lista książek" style="color: black"/>
+                </div>
             </div>
         </h:body>
     </f:view>

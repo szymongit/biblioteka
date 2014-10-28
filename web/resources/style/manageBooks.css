@@ -63,7 +63,7 @@ body {
 .centerRight {
     float:right;
     padding-top: 30px;
-    padding-bottom: 50px;
+    padding-bottom: 80px;
 }
 
 .table{
@@ -73,7 +73,7 @@ body {
     padding-right: 40px;
 }
 
-.column1 {
+/*.column1 {
     width: 50px;
 }
 
@@ -83,4 +83,4 @@ body {
 
 .column3 {
     width: 300px;
-}
+}*/

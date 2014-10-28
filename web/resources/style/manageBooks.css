@@ -49,6 +49,7 @@ body {
 .button {
     float: left;
     padding-left: 160px;
+    padding-bottom: 20px;
 }
 
 .class1 {
@@ -65,9 +66,21 @@ body {
     padding-bottom: 50px;
 }
 
-#table{
+.table{
     float: bottom;
     padding-top: 200px;
     padding-left: 100px;
     padding-right: 40px;
+}
+
+.column1 {
+    width: 50px;
+}
+
+.column2 {
+    width: 100px;
+}
+
+.column3 {
+    width: 300px;
 }

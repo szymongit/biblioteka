@@ -60,10 +60,11 @@
                     <div class="centerRight">
                         <h:graphicImage library="images" name="timeBooks2.png" width="450px" height="200px" alt="Add books"/>
                     </div>
-                    <div id="table">
+                    <div class="table">
                         <h:dataTable var="book" value="#{bean.booksData}" border="1"
                                      cellpadding="3" cellspacing="3"
-                                     rowClasses="class1,class2" id="booksTable">
+                                     rowClasses="class1,class2" id="booksTable" 
+                                     columnClasses="column1,column2,column1,column3,column1">
                             <h:column>
                                 <f:facet name="header">
                                     <h:outputText value="#{msg.authorA}"/>
